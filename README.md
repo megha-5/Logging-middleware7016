@@ -1,37 +1,127 @@
-# Logging Middleware Dashboard
+# Campus Priority Inbox
 
-## Description
-A React-based reusable logging middleware implementation with API integration and frontend logging functionality.
+A smart notification management system built using React JS and Material UI that prioritizes campus notifications based on importance and recency.
 
-## Features
-- Reusable Logger Utility
-- API Logging
-- Error Handling
-- React Component Architecture
-- Fetch API Integration
-- Clean UI Design
+---
+# logging-middleware screenshots
 ## Screenshots
 
 ### Dashboard UI
 
-![Dashboard](./page1.png)
+![Dashboard](./screenshots/dashboard.png)
 
 ---
 
 ### Console Output
 
-![Console](./page2.png)
+![Console](./screenshots/console.png)
 
 ---
 
 ### Fetch Users Action
 
-![Fetch Users](./page3.png)
-## Technologies Used
+![Fetch Users](./screenshots/fetch-users.png)
+
+## Project Overview
+
+Campus Priority Inbox is a responsive dashboard application that fetches notifications from an API and intelligently sorts them using a priority-based algorithm.
+
+The application ensures that students see the most important notifications first, such as placement updates, exam results, and campus events.
+
+---
+
+## Features
+
+- Authentication using API token
+- Dynamic notification fetching
+- Priority-based sorting algorithm
+- Responsive dashboard UI
+- Read and unread notification tracking
+- Filter notifications by category
+- Select Top 10 / 15 / 20 notifications
+- Modern Material UI design
+- Modular and scalable architecture
+
+---
+
+## Notification Priority Logic
+
+Notifications are sorted based on:
+
+| Notification Type | Priority |
+|-------------------|----------|
+| Placement         | Highest  |
+| Result            | Medium   |
+| Event             | Lowest   |
+
+If two notifications have the same priority, the newest notification is displayed first based on timestamp.
+
+---
+
+## Tech Stack
+
 - React JS
 - JavaScript
-- CSS
+- Material UI
 - Fetch API
+- CSS
+- REST API
 
-## Note
-The provided logging API may return CORS/401 errors due to backend configuration, but the frontend implementation is correct.
+---
+
+## Folder Structure
+
+src/
+│
+├── components/
+│ └── PriorityInbox.jsx
+│
+├── utils/
+│ ├── api.js
+│ └── prioritySorter.js
+│
+├── App.js
+└── index.js
+
+---
+
+## Modules Description
+
+### 1. api.js
+
+Handles:
+
+- Authentication
+- API requests
+- Fetching notifications
+- Authorization token management
+
+---
+
+### 2. prioritySorter.js
+
+Implements:
+
+- Priority sorting algorithm
+- Recency-based sorting
+- Top N notification selection
+
+---
+
+### 3. PriorityInbox.jsx
+
+Responsible for:
+
+- Dashboard UI
+- State management
+- Filters and controls
+- Responsive layout
+- Read/unread management
+
+---
+
+## Installation Steps
+
+### 1. Clone Repository
+
+```bash

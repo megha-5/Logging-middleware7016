@@ -31,7 +31,7 @@ The application ensures that students see the most important notifications first
 ---
 ### Stage1 UI
 
-![Stage1](./stage1.png)
+![Stage2](./stage1.png)
 
 ---
 
